@@ -78,7 +78,7 @@ class User extends \yii\web\User
         if ($this->loginUrl !== null) {
             $loginUrl = (array)$this->loginUrl;
             if ($loginUrl[0] !== Yii::$app->requestedRoute) {
-                return Yii::$app->getResponse()->redirect(Yii::$app->urlManager->hostInfo . $this->loginUrl[0]);
+                return Yii::$app->getResponse()->redirect(Yii::$app->urlManagerFrontend->createUrl($this->loginUrl));
             }
         }
         throw new ForbiddenHttpException(Yii::t('yii', 'Login Required'));
