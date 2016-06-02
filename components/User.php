@@ -4,6 +4,8 @@ namespace yeesoft\components;
 
 use yeesoft\helpers\AuthHelper;
 use Yii;
+use yii\base\InvalidValueException;
+use yii\web\ForbiddenHttpException;
 
 /**
  * Class User
